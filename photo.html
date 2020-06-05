@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>photo</title>
+        <link rel="stylesheet" href="styles_p.css">
+        
+        
+        <script>
+            //<![CDATA[
+            window.onload = function() {
+              //[1] 포토 목록에 작은 이미지를 클릭했을때 큰이미지로 변경
+          
+              //클릭이벤트를 등록하기 위해 포토 목록에 9개의 <a>요소를 모두 선택
+              var list_zone = document.getElementById("inner_list");
+              var list_a = list_zone.getElementsByTagName("a");
+          
+              //포토 리스트의 모든 <a>에 클릭 이벤트를 등록하기 위해서 반복문을 이용하여 등록
+              for(var i=0; i<list_a.length; i++) {
+                  list_a[i].onclick=function(){
+                      var ph=document.getElementById("photo").children[0];
+                      ph.src = this.href;
+                      return false; //<a>요소를 클릭했을때 링크가 되지 않도록 함.
+                  }
+              }
+            }    
+            </script>
+
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__name">LYJ</div>
+            <ul>
+                <li><a class="active" href="index.html"> Home </a></li>
+                <li><a href="information.html"> information </a></li>
+                <li><a href="photo.html"> Photo </a></li>
+               
+            </ul>
+        </header>
+        
+           <div id="gallery">
+            <h1>POTO GALLERY</h1>
+            <p id="photo">
+               <img src="조희1.jpg" width="500px" alt="" />
+            </p>
+            <div id="photo_list">
+               <ul id="inner_list">
+                   <li>
+                       <a href="조희1.jpg"><img src="조희1.jpg" width="150px" alt=""  /></a>
+                   </li>
+                   <li>
+                       <a href="순이1.jpg"><img src="순이1.jpg" width="150px" alt=""  /></a>
+                   </li>
+                   <li>
+                       <a href="뽀이1.jpg"><img src="뽀이1.jpg" width="150px" alt="" /></a>
+                   </li>
+                   <li>
+                       <a href="조희2.jpg"><img src="조희2.jpg" width="150px" alt=""  /></a>
+                   </li>        
+                   <li>
+                       <a href="순이2.jpg"><img src="순이2.jpg" width="150px" alt=""  /></a>
+                   </li>
+                   <li>
+                       <a href="뽀이2.jpg"><img src="뽀이2.jpg" width="150px" alt=""  /></a>
+                   </li>
+                   <li>
+                       <a href="조희3.jpg"><img src="조희3.jpg" width="150px" alt=""  /></a>
+                   </li>
+                   <li>
+                       <a href="순이3.jpg"><img src="순이3.jpg" width="150px" alt=""  /></a>
+                   </li>
+                   <li>
+                       <a href="main뽀이.jpg"><img src="main뽀이.jpg" width="150px" alt=""  /></a>
+                   </li>
+                   <li>
+                        <a href="조희4.jpg"><img src="조희4.jpg" width="150px" alt=""  /></a>
+                    </li>
+                    <li>
+                        <a href="순이4.jpg"><img src="순이4.jpg" width="150px" alt=""  /></a>
+                    </li>
+                    <li>
+                        <a href="뽀이3.jpg"><img src="뽀이3.jpg" width="150px" alt=""  /></a>
+                    </li>
+               </ul>
+            </div>
+
+        </div>
+        </body>
+       </html>
+
+          
+          
+
